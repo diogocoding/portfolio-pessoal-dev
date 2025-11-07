@@ -1,3 +1,18 @@
+Com certeza! Analisando as imagens das suas páginas internas (Sobre Mim, Projetos, etc.), notei que você já usa ilustrações lindas com uma estética "cozy" e de estúdio de anime, que combina perfeitamente com a ideia do Ghibli.
+
+O seu problema é que a página principal (a primeira imagem) está com um visual muito "frio" e minimalista (preto e branco puro), que não combina com as ilustrações quentes e cheias de personalidade do restante do site.
+
+Ajustei o seu CSS para resolver isso. A estratégia foi:
+
+Mudar a paleta de cores: Troquei o #ffffff (branco puro) por um tom de "branco creme" (#FFFAF0). Isso torna todo o texto, bordas e ícones levemente mais quentes e "aconchegantes", com uma sensação mais analógica e menos digital, combinando com o estilo Ghibli.
+
+Preparar o fundo: O ponto principal da mudança será a imagem de fundo. O seu CSS atual (#bg:after) aponta para url("../../images/bg.jpg"). Para o estilo Ghibli, você precisará trocar essa imagem por uma paisagem ou cena que siga essa estética.
+
+Aqui está o main.css completamente atualizado. A única coisa que você precisa fazer é trocar a imagem de fundo que eu indiquei.
+
+🎨 Seu Novo main.css (Estilo Ghibli/Cozy)
+CSS
+
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
@@ -140,7 +155,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #ffffff;
+		color: #FFFAF0; /* Modificado de #ffffff */
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
@@ -152,7 +167,7 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+		border-bottom: dotted 1px rgba(255, 250, 240, 0.5); /* Modificado de rgba(255, 255, 255, 0.5) */
 		text-decoration: none;
 		color: inherit;
 	}
@@ -162,7 +177,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: #FFFAF0; /* Modificado de #ffffff */
 		font-weight: 600;
 	}
 
@@ -175,7 +190,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #FFFAF0; /* Modificado de #ffffff */
 		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
@@ -189,7 +204,7 @@ input, select, textarea {
 		}
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
-			border-bottom: solid 1px #ffffff;
+			border-bottom: solid 1px #FFFAF0; /* Modificado de #ffffff */
 			width: -moz-max-content;
 			width: -webkit-max-content;
 			width: -ms-max-content;
@@ -253,14 +268,14 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left: solid 4px #ffffff;
+		border-left: solid 4px #FFFAF0; /* Modificado de #ffffff */
 		font-style: italic;
 		margin: 0 0 2rem 0;
 		padding: 0.5rem 0 0.5rem 2rem;
 	}
 
 	code {
-		background: rgba(255, 255, 255, 0.075);
+		background: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 		border-radius: 4px;
 		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
@@ -284,7 +299,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px #ffffff;
+		border-bottom: solid 1px #FFFAF0; /* Modificado de #ffffff */
 		margin: 2.75rem 0;
 	}
 
@@ -375,7 +390,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #ffffff;
+		color: #FFFAF0; /* Modificado de #ffffff */
 		display: block;
 		font-size: 0.8rem;
 		font-weight: 300;
@@ -401,7 +416,7 @@ input, select, textarea {
 		transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -425,13 +440,13 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-			box-shadow: 0 0 0 1px #ffffff;
+			background: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
+			border-color: #FFFAF0; /* Modificado de #ffffff */
+			box-shadow: 0 0 0 1px #FFFAF0; /* Modificado de #ffffff */
 		}
 
 	select {
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23ffffff' /%3E%3C/svg%3E");
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23FFFAF0' /%3E%3C/svg%3E"); /* Modificado fill='%23ffffff' */
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
@@ -441,7 +456,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
+			color: #FFFAF0; /* Modificado de #ffffff */
 			background: #1b1f22;
 		}
 
@@ -485,7 +500,7 @@ input, select, textarea {
 			-webkit-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			color: #ffffff;
+			color: #FFFAF0; /* Modificado de #ffffff */
 			cursor: pointer;
 			display: inline-block;
 			font-size: 0.8rem;
@@ -517,7 +532,7 @@ input, select, textarea {
 				-ms-transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 				border-radius: 4px;
-				border: solid 1px #ffffff;
+				border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 				content: '';
 				display: inline-block;
 				height: 1.65rem;
@@ -531,17 +546,17 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #ffffff !important;
-			border-color: #ffffff !important;
+			background: #FFFAF0 !important; /* Modificado de #ffffff */
+			border-color: #FFFAF0 !important; /* Modificado de #ffffff */
 			color: #1b1f22;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-			box-shadow: 0 0 0 1px #ffffff;
+			background: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
+			border-color: #FFFAF0; /* Modificado de #ffffff */
+			box-shadow: 0 0 0 1px #FFFAF0; /* Modificado de #ffffff */
 		}
 
 	input[type="checkbox"] + label:before {
@@ -553,27 +568,27 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 250, 240, 0.5) !important; /* Modificado de rgba(255, 255, 255, 0.5) */
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 250, 240, 0.5) !important; /* Modificado de rgba(255, 255, 255, 0.5) */
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 250, 240, 0.5) !important; /* Modificado de rgba(255, 255, 255, 0.5) */
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 250, 240, 0.5) !important; /* Modificado de rgba(255, 255, 255, 0.5) */
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(255, 250, 240, 0.5) !important; /* Modificado de rgba(255, 255, 255, 0.5) */
 		opacity: 1.0;
 	}
 
@@ -581,7 +596,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 4px;
-		border: solid 1px #ffffff;
+		border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 		margin-bottom: 2rem;
 		padding: 1.5em;
 	}
@@ -748,7 +763,7 @@ input, select, textarea {
 		}
 
 			ul.alt li {
-				border-top: solid 1px #ffffff;
+				border-top: solid 1px #FFFAF0; /* Modificado de #ffffff */
 				padding: 0.5em 0;
 			}
 
@@ -912,7 +927,7 @@ input, select, textarea {
 
 			ul.icons li a {
 				border-radius: 100%;
-				box-shadow: inset 0 0 0 1px #ffffff;
+				box-shadow: inset 0 0 0 1px #FFFAF0; /* Modificado de #ffffff */
 				display: inline-block;
 				height: 2.25rem;
 				line-height: 2.25rem;
@@ -921,11 +936,11 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 				}
 
 				ul.icons li a:active {
-					background-color: rgba(255, 255, 255, 0.175);
+					background-color: rgba(255, 250, 240, 0.175); /* Modificado de rgba(255, 255, 255, 0.175) */
 				}
 
 /* Table */
@@ -941,13 +956,13 @@ input, select, textarea {
 	}
 
 		table tbody tr {
-			border: solid 1px #ffffff;
+			border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 			border-left: 0;
 			border-right: 0;
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.075);
+				background-color: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 			}
 
 		table td {
@@ -955,7 +970,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #ffffff;
+			color: #FFFAF0; /* Modificado de #ffffff */
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -963,11 +978,11 @@ input, select, textarea {
 		}
 
 		table thead {
-			border-bottom: solid 2px #ffffff;
+			border-bottom: solid 2px #FFFAF0; /* Modificado de #ffffff */
 		}
 
 		table tfoot {
-			border-top: solid 2px #ffffff;
+			border-top: solid 2px #FFFAF0; /* Modificado de #ffffff */
 		}
 
 		table.alt {
@@ -975,7 +990,7 @@ input, select, textarea {
 		}
 
 			table.alt tbody tr td {
-				border: solid 1px #ffffff;
+				border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -1014,8 +1029,8 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 4px;
 		border: 0;
-		box-shadow: inset 0 0 0 1px #ffffff;
-		color: #ffffff !important;
+		box-shadow: inset 0 0 0 1px #FFFAF0; /* Modificado de #ffffff */
+		color: #FFFAF0 !important; /* Modificado de #ffffff */
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8rem;
@@ -1036,7 +1051,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 255, 255, 0.075);
+			background-color: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 		}
 
 		input[type="submit"]:active,
@@ -1044,7 +1059,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(255, 255, 255, 0.175);
+			background-color: rgba(255, 250, 240, 0.175); /* Modificado de rgba(255, 255, 255, 0.175) */
 		}
 
 		input[type="submit"].icon:before,
@@ -1078,7 +1093,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ffffff;
+			background-color: #FFFAF0; /* Modificado de #ffffff */
 			color: #1b1f22 !important;
 			font-weight: 600;
 		}
@@ -1140,12 +1155,20 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto, 256px 256px;
+			background-position: center, center;
+			background-repeat: no-repeat, repeat;
 			z-index: 2;
 		}
 
+		/* ==================================================================
+		   ATENÇÃO, DIOGO:
+		   Essa é a mudança MAIS IMPORTANTE para o estilo Ghibli.
+		   Troque o "url" abaixo para a imagem de fundo que você quer usar.
+		   Sugiro uma paisagem, um céu ou uma cena "cozy" no estilo
+		   das ilustrações que você já tem nas outras páginas.
+		   ==================================================================
+		*/
 		#bg:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
@@ -1155,7 +1178,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("sua-nova-imagem-de-fundo.jpg"); /* <-- TROQUE AQUI */
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1276,7 +1299,7 @@ input, select, textarea {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: #FFFAF0; /* Modificado de #ffffff */
 			}
 
 		#header > :first-child {
@@ -1291,7 +1314,7 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
+			border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 			border-radius: 100%;
 		}
 
@@ -1301,7 +1324,7 @@ input, select, textarea {
 
 		#header .content {
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #FFFAF0; /* Modificado de #ffffff */
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
@@ -1340,13 +1363,13 @@ input, select, textarea {
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #ffffff;
+			border: solid 1px #FFFAF0; /* Modificado de #ffffff */
 			border-radius: 4px;
 		}
 
 			#header nav ul li {
 				padding-left: 0;
-				border-left: solid 1px #ffffff;
+				border-left: solid 1px #FFFAF0; /* Modificado de #ffffff */
 			}
 
 				#header nav ul li:first-child {
@@ -1366,11 +1389,11 @@ input, select, textarea {
 				}
 
 					#header nav ul li a:hover {
-						background-color: rgba(255, 255, 255, 0.075);
+						background-color: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 					}
 
 					#header nav ul li a:active {
-						background-color: rgba(255, 255, 255, 0.175);
+						background-color: rgba(255, 250, 240, 0.175); /* Modificado de rgba(255, 255, 255, 0.175) */
 					}
 
 		#header nav.use-middle:after {
@@ -1381,7 +1404,7 @@ input, select, textarea {
 			left: calc(50% - 1px);
 			width: 1px;
 			height: 100%;
-			background: #ffffff;
+			background: #FFFAF0; /* Modificado de #ffffff */
 		}
 
 		#header nav.use-middle ul li.is-middle {
@@ -1478,7 +1501,7 @@ input, select, textarea {
 
 					#header nav ul li {
 						border-left: 0;
-						border-top: solid 1px #ffffff;
+						border-top: solid 1px #FFFAF0; /* Modificado de #ffffff */
 					}
 
 						#header nav ul li:first-child {
@@ -1583,17 +1606,17 @@ input, select, textarea {
 					height: 2.5rem;
 					border-radius: 100%;
 					background-position: center;
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23FFFAF0%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E"); /* Modificado stroke: %23ffffff% */
 					background-size: 20px 20px;
 					background-repeat: no-repeat;
 				}
 
 				#main article .close:hover:before {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(255, 250, 240, 0.075); /* Modificado de rgba(255, 255, 255, 0.075) */
 				}
 
 				#main article .close:active:before {
-					background-color: rgba(255, 255, 255, 0.175);
+					background-color: rgba(255, 250, 240, 0.175); /* Modificado de rgba(255, 255, 255, 0.175) */
 				}
 
 		@media screen and (max-width: 736px) {
