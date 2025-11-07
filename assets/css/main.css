@@ -1148,14 +1148,7 @@ input, select, textarea {
 			z-index: 2;
 		}
 
-		/* ==================================================================
-		   ATENÇÃO, DIOGO:
-		   Essa é a mudança MAIS IMPORTANTE para o estilo Ghibli.
-		   Troque o "url" abaixo para a imagem de fundo que você quer usar.
-		   Sugiro uma paisagem, um céu ou uma cena "cozy" no estilo
-		   das ilustrações que você já tem nas outras páginas.
-		   ==================================================================
-		*/
+
 		#bg:after {
 			-moz-transform: scale(1.125);
 			-webkit-transform: scale(1.125);
@@ -1165,7 +1158,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("sua-nova-imagem-de-fundo.jpg"); /* <-- TROQUE AQUI */
+			background-image: url("https://i.postimg.cc/G2h9sNH6/Gemini-Generated-Image-l5emzjl5emzjl5em.png");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1666,4 +1659,5 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
